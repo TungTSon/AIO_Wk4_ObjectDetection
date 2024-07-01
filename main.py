@@ -36,12 +36,12 @@ def main():
 
     # check validity of uploaded file
     if file is not None:
-        st.image(file, caption='Uploaded Image')
+        st.image(file, caption='Uploaded Image')    # show the input image
         image = np.array(Image.open(file))
         detections = process_image(image)
         processed_image = annotate_image(
             image, detections, threshold)  # output image
-        st.image(processed_image, caption='Processed Image')
+        st.image(processed_image, caption='Processed Image')    # show output image
 
 
 if __name__ == "__main__":
